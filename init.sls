@@ -38,7 +38,7 @@ create-appdynamics-dbagent-symlink:
 ### SERVICE ###
 appdynamics-dbagent-service:
   service.running:
-    - name: {{ appd.user }}
+    - name: appdynamics-dbagent
     - enable: True
     - require:
       - archive: unpack-appdynamics-dbagent-tarball
