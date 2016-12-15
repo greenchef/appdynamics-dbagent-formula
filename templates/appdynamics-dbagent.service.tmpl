@@ -1,0 +1,9 @@
+[Unit]
+Description=AppDynamics Database Agent
+
+[Service]
+Type=simple
+ExecStart=/usr/lib/java/bin/java -jar {{ appd.prefix }}/appdynamics-dbagent/db-agent.jar
+
+[Install]
+WantedBy=multi-user.target
