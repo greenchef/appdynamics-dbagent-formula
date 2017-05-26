@@ -74,8 +74,9 @@ create-appdynamics-dbagent-service-symlink:
     - watch:
       - file: appdynamics-dbagent-init-script
 
-{{ appd.user }}:
+ensure-user-present:
   user.present
+    - name: {{ appd.user }}
 
 ### FILES ###
 {{ appd.prefix }}/appdynamics-dbagent/conf/controller-info.xml:
