@@ -3,7 +3,7 @@ Description=AppDynamics Database Agent
 
 [Service]
 Type=simple
-ExecStart=/usr/lib/java/bin/java -jar {{ appd.prefix }}/appdynamics-dbagent/db-agent.jar
+ExecStart=/usr/lib/java/bin/java -Ddbagent.name="mongodb-cluster-0" -jar {{ appd.prefix }}/appdynamics-dbagent/db-agent.jar
 
 [Install]
 WantedBy=multi-user.target

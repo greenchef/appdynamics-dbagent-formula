@@ -9,6 +9,7 @@ unpack-appdynamics-dbagent-tarball:
     - archive_format: zip
     - user: {{ appd.user }}
     - keep: True
+    - enforce_toplevel: False
     - require:
       - module: appdynamics-dbagent-stop
       - file: appdynamics-dbagent-init-script
